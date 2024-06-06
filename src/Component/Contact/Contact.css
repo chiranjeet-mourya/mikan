@@ -1,0 +1,102 @@
+/* CONTACT CSS */
+
+#contact{
+    padding: 40px 0;
+
+    .contact_wrapper{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 60px;
+        flex-wrap: wrap;
+
+        @media (max-width:992px){
+            justify-content: center;
+        }
+        @media (max-width:767px){
+            flex-direction: column;
+        }
+
+        .contace_col{
+            width: calc(100% / 2 - 16px);
+            padding: 16px;
+            box-sizing: border-box;
+
+            @media (max-width:992px){
+                width: 50%;
+            }
+            @media (max-width:767px){
+               width: 100%;
+            }
+        }
+
+        .imput_wrapper{
+            width: 100%;
+            display: flex;
+
+            .form_control{
+                width: 100%;
+                background: transparent;
+                border: .0714rem solid var(--white-color);
+                color: var(--white-color);
+                font-size: 15px;
+                font-weight: 500;
+                padding: 10px 20px;
+                border-radius: 8px;
+                margin-bottom: 40px;
+            }
+
+            & textarea{
+                width: 100%;
+                min-height: 100px;
+                display: block;
+                background: transparent;
+                border: .0714rem solid var(--white-color);
+                color: var(--white-color);
+                font-size: 15px;
+                font-weight: 500;
+                padding: 10px 20px;
+                border-radius: 8px;
+            }
+
+            .form_control:hover,
+            & textarea:hover,
+            .form_control:focus,
+            & textarea:focus{
+                border-color: var(--primary-color);
+                color: var(--white-color);
+            }
+
+        }
+
+        .btn_wrapper{
+            margin-top: 30px;
+        }
+
+        .contact_image{
+            position: relative;
+
+            &::after{
+                overflow: hidden;
+                content: url("../../assets/about/layer_2.png");
+                position: absolute;
+                z-index: 1;
+                top: -70px;
+                right: -20px;
+                max-width: 100%;
+            }
+            
+            @media (max-width:1024px){
+                &::after{
+                    right: 0;
+                }
+            }
+
+            & img{
+                border-radius: 30px;
+                position: relative;
+                z-index: 2;
+                max-width: 85%;
+            }
+        }
+    }
+}
